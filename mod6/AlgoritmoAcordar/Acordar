@@ -1,0 +1,20 @@
+Algoritmo RotinaDeAcordar
+
+Inicio
+    Escrever("1 - Ao acordar, abro os olhos;")
+    Escrever("2 - Levanto da cama e coloco o chinelo;")
+    Escrever("3 - Após levantar e colocar o chinelo, vou até o banheiro;")
+    Escrever("4 - Chegando no banheiro, ligo a torneira da pia e lavo o rosto;")
+    Escrever("5 - Após lavar o rosto, enxugo na tolhada;")
+    Escrever("6 - Após, pego a pasta de dentes, coloco na escova de dentes e escovo os dentes;")
+    Escrever("7 - Após escovar os dentes, saio do banheiro e vou até a cozinha;")
+    Escrever("8 - Na cozinha, pego o filtro e o pó de café no armário;")
+    Escrever("9 - Após pegar o filtro e o pó de café, vou até a cafeteira;")
+    Escrever("10 - Coloco o filtro e após o pó na cafeteira;")
+    Escrever("11 - Após, coloco água no compartimento da Cafeteira;")
+    Escrever("12 - Após, com os ingredientes na máquina, ligo a cafeteira, apertando o botão de ligando;")
+    Escrever("13 - Enquanto aguardo o café ficar pronto, vou até o armário e pego a xícara de café;")
+    Escrever("14 - Retorno até a cafeteira;")
+    Escrever("15 - Quando o café está pronto, pego a xícara e despejo o café dentro;")
+    Escrever("16 - Após colocar o café na xícara, bebo o café.")
+Fim Algoritmo
