@@ -7,6 +7,12 @@ package cadastroclientesw;
 import dao.ClienteMapDAO;
 import dao.IClienteDAO;
 import domain.Cliente;
+import java.awt.Desktop;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -164,6 +170,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenu2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
         btnLinkedIn.setText("LinkedIn");
+        btnLinkedIn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLinkedInActionPerformed(evt);
+            }
+        });
         jMenu2.add(btnLinkedIn);
 
         jMenuBar1.add(jMenu2);
@@ -365,6 +376,18 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private void txtUFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUFActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtUFActionPerformed
+
+    private void btnLinkedInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLinkedInActionPerformed
+        try {
+            try {
+                Desktop.getDesktop().browse(new URI("https://www.linkedin.com/in/diegoapicello/"));
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(TelaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(TelaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_btnLinkedInActionPerformed
 
     /**
      * @param args the command line arguments
