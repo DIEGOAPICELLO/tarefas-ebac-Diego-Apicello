@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Pessoas {
 
     private String name;
@@ -28,4 +30,24 @@ public class Pessoas {
         this.sexo = sexo;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Pessoas pessoas = (Pessoas) o;
+        return Objects.equals(name, pessoas.name) && Objects.equals(sexo, pessoas.sexo);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, sexo);
+    }
+
+    @Override
+    public String toString() {
+        return "Pessoas{" +
+                "name='" + name + '\'' +
+                ", sexo='" + sexo + '\'' +
+                '}';
+    }
 }
