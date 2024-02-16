@@ -28,4 +28,18 @@ public class TesteMulheres {
         System.out.println(actualGenderNames);
 
     }
+
+    @Test
+    public void testWoman() {
+        List<Pessoas> pessoas = List.of(
+                new Pessoas("Maria", "F"),
+                new Pessoas("Joao", "M"),
+                new Pessoas("ingrid", "F"),
+                new Pessoas("Diego", "M"),
+                new Pessoas("Laurisete", "F")
+        );
+
+        assertTrue(Main.hasWoman(pessoas));
+
+    }
 }

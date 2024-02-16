@@ -70,5 +70,15 @@ public class Main {
         for (Pessoas person : male) {
             System.out.println(person.getName());
         }
+
+    }
+
+    public static boolean hasWoman(List<Pessoas> pessoas) {
+        for (Pessoas pessoa : pessoas){
+            if (pessoa.getSexo().equalsIgnoreCase("F")){
+                return true;
+            }
+        }
+        return false;
     }
 }
