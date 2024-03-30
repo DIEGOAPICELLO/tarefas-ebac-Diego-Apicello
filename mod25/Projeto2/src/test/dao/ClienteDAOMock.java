@@ -4,14 +4,10 @@ import dao.IClienteDAO;
 import main.Cliente;
 
 public class ClienteDAOMock implements IClienteDAO {
-    @Override
-    public void salvar() {
-
-    }
 
     @Override
-    public void salvar(Cliente cliente) {
-
+    public Boolean salvar(Cliente cliente) {
+        return true;
     }
 
     @Override
@@ -19,5 +15,15 @@ public class ClienteDAOMock implements IClienteDAO {
         Cliente cliente = new Cliente();
         cliente.setCPF(cpf);
         return cliente;
+    }
+
+    @Override
+    public void excluir(Long cpf) {
+
+    }
+
+    @Override
+    public void alterar(Cliente cliente) {
+
     }
 }
