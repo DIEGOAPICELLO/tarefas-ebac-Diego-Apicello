@@ -1,0 +1,16 @@
+version: '3.8'  # Especifica a versão do Docker Compose
+
+services:
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: manoburn
+      POSTGRES_PASSWORD: Mb2773
+      POSTGRES_DB: meubanco
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
