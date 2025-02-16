@@ -1,10 +1,12 @@
 package com.employee_service.Employee.Service.controllers;
 
+import com.employee_service.Employee.Service.AnimalClient;
 import com.employee_service.Employee.Service.entities.Employee;
 import com.employee_service.Employee.Service.services.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -14,6 +16,7 @@ public class EmployeeController {
 
     @Autowired
     private EmployeeService employeeService;
+    private AnimalClient animalClient;
 
     @GetMapping
     public List<Employee> getAllFuncionarios() {
@@ -39,6 +42,14 @@ public class EmployeeController {
     @DeleteMapping("/{id}")
     public void deletarFuncionar (@PathVariable Long id) {
         employeeService.deleteById(id);
+    }
+
+    @GetMapping("/{nomeRecebedor}/animais-recebidos")
+    public Long countAnimaisRecebidos(
+            @PathVariable String nomeRecebedor,
+            @RequestParam LocalDate startDate,
+            @RequestParam LocalDate endDate) {
+        return animalClient.countAnimaisRecebidosPorFuncionario(nomeRecebedor, startDate, endDate);
     }
 
 }
