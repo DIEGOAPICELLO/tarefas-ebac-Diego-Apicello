@@ -8,7 +8,7 @@ import java.time.LocalDate;
 public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @SequenceGenerator(name = "sequence_usuario", sequenceName = "sequence_usuario", allocationSize = 50)
+    @SequenceGenerator(name = "sequence_usuario", sequenceName = "sequence_usuario", allocationSize = 1)
     private Long id;
 
     @Column(nullable = false)
