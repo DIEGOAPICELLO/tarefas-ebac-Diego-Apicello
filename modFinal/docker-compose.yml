@@ -1,0 +1,34 @@
+version: "3.8"
+services:
+  usuario-service:
+    build:
+      context: ./usuario-service
+    ports:
+      - "8081:8081"
+    networks:
+      - memelandia-network
+
+  categoria-service:
+    build:
+      context: ./categoria-service
+    ports:
+      - "8082:8082"
+    networks:
+      - memelandia-network
+    depends_on:
+      - usuario-service
+
+  meme-service:
+    build:
+      context: ./meme-service
+    ports:
+      - "8083:8083"
+    networks:
+      - memelandia-network
+    depends_on:
+      - usuario-service
+      - categoria-service
+
+networks:
+  memelandia-network:
+    driver: bridge
