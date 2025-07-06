@@ -70,6 +70,7 @@ POST /memes – Cria novo meme (valida existência de usuário e categoria)
 DELETE /memes/{id} – Remove meme
 
 ✅ Exemplo de JSON para POST
+
 📥 Criar Usuário (POST /usuarios)
 json
 Copiar
@@ -79,6 +80,7 @@ Editar
   "email": "diego@example.com",
   "dataCadastro": "2025-07-06"
 }
+
 📥 Criar Categoria (POST /categorias)
 json
 Copiar
@@ -88,6 +90,7 @@ Editar
   "descricao": "Humor do dia a dia da programação",
   "dataCadastro": "2025-07-06"
 }
+
 📥 Criar Meme (POST /memes)
 json
 Copiar
@@ -100,6 +103,7 @@ Editar
   "usuarioId": 1,
   "categoriaId": 1
 }
+
 📊 Observabilidade
 Todos os serviços expõem métricas via Actuator:
 
